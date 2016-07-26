@@ -39,6 +39,7 @@ public class SplashPageFragment extends Fragment {
     @BindColor(R.color.colorBlue) int colorBlue;
     @BindColor(R.color.colorRed)int colorRed;
     @BindColor(R.color.colorGreen)int colorGreen;
+    View[] views ;
 
     @Nullable
     @Override
@@ -52,12 +53,18 @@ public class SplashPageFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        adapter = new SplashAdapter(getContext());
+        loadData();
+        adapter = new SplashAdapter(getContext(),views);
         viewPager.setAdapter(adapter);
         indicator.setViewPager(viewPager);
+        setAnimation(0);
         viewPager.addOnPageChangeListener(pageColorListener);
         viewPager.addOnPageChangeListener(phoneViewListener);
 
+    }
+
+    private void loadData(){
+        views = new View[]{new Page0(getContext()),new Page1(getContext()),new Page2(getContext())};
     }
 
     // 主要为了做背景颜色渐变处理
@@ -82,7 +89,7 @@ public class SplashPageFragment extends Fragment {
 
         @Override
         public void onPageSelected(int position) {
-
+           setAnimation(position);
         }
 
         @Override
@@ -123,6 +130,16 @@ public class SplashPageFragment extends Fragment {
 
         }
     };
+
+    public void setAnimation(int position){
+        if (position == 0){
+            Page0 page0 = (Page0) adapter.getView(position);
+            page0.showAnimation();
+        }else if (position == 2){
+            Page2 page2 = (Page2) adapter.getView(position);
+            page2.showAnimation();
+        }
+    }
 
     @Override
     public void onDestroyView() {

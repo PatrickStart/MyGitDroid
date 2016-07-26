@@ -13,10 +13,14 @@ import com.feicuiedu.gitdroid.splash.Page2;
  * Created by he.xx on 2016/7/26.
  */
 public class SplashAdapter extends PagerAdapter {
-    private final View[] views;
+    private  View[] views;
 
-    public SplashAdapter(Context mC) {
-        views = new View[]{new Page0(mC),new Page1(mC),new Page2(mC)};
+    public SplashAdapter(Context mC,View[] views) {
+        this.views = views;
+    }
+
+    public View getView(int position) {
+        return views[position];
     }
 
     @Override
