@@ -1,4 +1,4 @@
-package com.feicuiedu.gitdroid.splash.adapter;
+package com.feicuiedu.gitdroid.adapter;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
