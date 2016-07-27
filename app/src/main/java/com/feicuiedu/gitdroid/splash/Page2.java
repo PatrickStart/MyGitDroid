@@ -71,11 +71,14 @@ public class Page2 extends FrameLayout {
                     YoYo.with(Techniques.SlideInRight).duration(300).playOn(ivBubble2);
                 }
             },1200);
-        }else {
-            ivBubble1.setVisibility(View.GONE);
-            ivBubble2.setVisibility(View.GONE);
-            ivBubble3.setVisibility(View.GONE);
         }
 
+    }
+
+
+    public void hideImG(){
+        ivBubble1.setVisibility(View.GONE);
+        ivBubble2.setVisibility(View.GONE);
+        ivBubble3.setVisibility(View.GONE);
     }
 }

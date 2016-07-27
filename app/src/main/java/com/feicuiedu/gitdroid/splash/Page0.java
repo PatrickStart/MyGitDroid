@@ -63,10 +63,12 @@ public class Page0 extends FrameLayout {
                     YoYo.with(Techniques.RubberBand).duration(500).playOn(ivDesktop);
                 }
             },500);
-        }else {
-            ivTablet.setVisibility(View.GONE);
-            ivDesktop.setVisibility(View.GONE);
         }
 
+    }
+
+    public void hideView(){
+        ivTablet.setVisibility(View.GONE);
+        ivDesktop.setVisibility(View.GONE);
     }
 }

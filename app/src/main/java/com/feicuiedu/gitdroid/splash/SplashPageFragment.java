@@ -40,6 +40,9 @@ public class SplashPageFragment extends Fragment {
     @BindColor(R.color.colorRed)int colorRed;
     @BindColor(R.color.colorGreen)int colorGreen;
     View[] views ;
+    Page2 page2;
+    Page0 page0;
+    Page1 page1;
 
     @Nullable
     @Override
@@ -57,6 +60,8 @@ public class SplashPageFragment extends Fragment {
         adapter = new SplashAdapter(getContext(),views);
         viewPager.setAdapter(adapter);
         indicator.setViewPager(viewPager);
+        page0 = (Page0) adapter.getView(0);
+        page2 = (Page2) adapter.getView(2);
         setAnimation(0);
         viewPager.addOnPageChangeListener(pageColorListener);
         viewPager.addOnPageChangeListener(phoneViewListener);
@@ -133,11 +138,12 @@ public class SplashPageFragment extends Fragment {
 
     public void setAnimation(int position){
         if (position == 0){
-            Page0 page0 = (Page0) adapter.getView(position);
             page0.showAnimation();
         }else if (position == 2){
-            Page2 page2 = (Page2) adapter.getView(position);
             page2.showAnimation();
+        }else if (position == 1){
+            page2.hideImG();
+            page0.hideView();
         }
     }
 
