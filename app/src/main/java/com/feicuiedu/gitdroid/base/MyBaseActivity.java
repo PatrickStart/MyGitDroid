@@ -23,6 +23,7 @@ public abstract class MyBaseActivity extends AppCompatActivity implements View.O
         setView();
     }
 
+
     protected abstract void setLayout();
 
     protected abstract void loadData();

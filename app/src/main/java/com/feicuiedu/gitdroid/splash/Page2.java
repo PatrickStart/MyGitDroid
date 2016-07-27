@@ -40,9 +40,9 @@ public class Page2 extends FrameLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.content_pager_2, this, true);
         ButterKnife.bind(this);
-        ivBubble1.setVisibility(View.GONE);
-        ivBubble2.setVisibility(View.GONE);
-        ivBubble3.setVisibility(View.GONE);
+        ivBubble1.setVisibility(View.INVISIBLE);
+        ivBubble2.setVisibility(View.INVISIBLE);
+        ivBubble3.setVisibility(View.INVISIBLE);
     }
 
     /**
@@ -63,14 +63,14 @@ public class Page2 extends FrameLayout {
                     ivBubble2.setVisibility(View.VISIBLE);
                     YoYo.with(Techniques.SlideInRight).duration(300).playOn(ivBubble2);
                 }
-            },600);
+            },500);
             postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     ivBubble3.setVisibility(View.VISIBLE);
-                    YoYo.with(Techniques.SlideInRight).duration(300).playOn(ivBubble2);
+                    YoYo.with(Techniques.SlideInRight).duration(300).playOn(ivBubble3);
                 }
-            },1200);
+            },1100);
         }
 
     }
