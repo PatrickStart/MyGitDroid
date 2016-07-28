@@ -1,4 +1,4 @@
-package com.feicuiedu.gitdroid.hotrepository;
+package com.feicuiedu.gitdroid.hotrepository.frgment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.feicuiedu.gitdroid.R;
 import com.feicuiedu.gitdroid.adapter.HotRepoAdapter;
 import com.feicuiedu.gitdroid.base.MyBaseFragment;
-import com.feicuiedu.gitdroid.hotrepository.frgment.RepoListFragment;
+import com.feicuiedu.gitdroid.hotrepository.frgment.RepoListPtrFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,10 +51,10 @@ public class HotRepoFragment extends MyBaseFragment {
     private void loadData() {
         list = new ArrayList<Fragment>();
         strList = new ArrayList<String>();
-        list.add(new RepoListFragment());
-        list.add(new RepoListFragment());
-        list.add(new RepoListFragment());
-        list.add(new RepoListFragment());
+        list.add(new RepoListPtrFragment());
+        list.add(new RepoListPtrFragment());
+        list.add(new RepoListPtrFragment());
+        list.add(new RepoListPtrFragment());
 
         strList.add("JAVA");
         strList.add("HTML");

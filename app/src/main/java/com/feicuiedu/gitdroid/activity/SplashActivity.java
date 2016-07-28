@@ -48,11 +48,11 @@ public class SplashActivity extends MyBaseActivity {
         switch (view.getId()) {
             case R.id.btnLogin:
             startActivity(LoginActivity.class);
-
+            finish();
                 break;
             case R.id.btnEnter:
             startActivity(MainActivity.class);
-
+            finish();
                 break;
         }
     }

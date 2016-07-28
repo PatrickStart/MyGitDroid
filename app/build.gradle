@@ -30,7 +30,12 @@ dependencies {
     compile 'me.relex:circleindicator:1.2.1@aar'
     // 下拉刷新
     compile 'in.srain.cube:ultra-ptr:1.0.11'
+
+    //butterknife注解框架
     compile 'com.jakewharton:butterknife:7.0.1'
+
+    //上拉加载
+    compile 'com.vinaysshenoy:mugen:1.0.2'
 
     //第三方YOYO动画效果
     compile 'com.nineoldandroids:library:2.4.0'

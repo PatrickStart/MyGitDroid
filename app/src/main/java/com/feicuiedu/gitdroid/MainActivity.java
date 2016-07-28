@@ -1,11 +1,9 @@
 package com.feicuiedu.gitdroid;
 
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.feicuiedu.gitdroid.base.MyBaseActivity;
-import com.feicuiedu.gitdroid.hotrepository.HotRepoFragment;
+import com.feicuiedu.gitdroid.hotrepository.frgment.HotRepoFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -112,4 +110,6 @@ public class MainActivity extends MyBaseActivity {
     public void onClick(View v) {
 
     }
+
+
 }
